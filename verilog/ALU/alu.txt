@@ -1,0 +1,20 @@
+alu_opcode | branch | alu_result
+00000          0         add
+00001          0         sub
+00010          0         sll
+00011          0         slt
+00100          0         sltu
+00101          0         xor
+00110          0         srl
+00111          0         sra
+01000          0         or
+01001          0         and
+01010          0         mul
+01011          0         div
+
+01100          beq       0
+01101          bne       0
+01110          blt       0
+01111          bge       0
+10000          bltu      0
+10001          bgeu      0

@@ -1,0 +1,3 @@
+module add_sub(clk,rst,a,b,add_sub,result);
+input clk,rst,add_sub;
+input [31:0] a,b;
