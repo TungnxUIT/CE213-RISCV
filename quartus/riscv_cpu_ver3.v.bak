@@ -1,0 +1,108 @@
+module riscv_cpu_ver3(clk, reset, instruc, pc_now, rs1_src, rs2_src, pcsrc, s0, s1, s2, s3, imm, alu_branch, a, b, r1, r2, ra1, ra2, pc_b);
+input clk, reset;
+
+wire[31:0] write_data, data1, data2, memory_out, pc_4, adder_in, pc_branch, in, pc, alu_result, pc_branch_out4, alu_result_out3, alu_result_out4, extend_imm;
+wire[2:0] r_dm, sign_ext;
+wire w_reg, branch, alu_src, pc_sel, w_reg_out2, w_reg_out3, w_reg_out4;
+wire[4:0] alu_op, rd_out2, rd_out3, rd_out4;
+wire[1:0] w_dm, reg_dest;
+wire isbranch, pcsrc_out4, reset2;
+//wire pcsrc;
+output pcsrc;
+
+//test variable
+output reg[31:0] instruc, pc_now, imm, a, b, r1, r2, pc_b;
+output reg[4:0] ra1, ra2;
+output[31:0] s0, s1, s2, s3;
+output[1:0] rs1_src, rs2_src;
+output reg alu_branch;
+wire[31:0] operand_a, operand_b;
+//output reg we;
+//begin datapath
+wire[31:0] pc_branch_out3;
+
+program_counter_ver2 pc_ver2(clk, reset, pc_branch_out3, pcsrc, pc, pc_4);
+
+instruction_mem ins(clk, pc, in);
+
+// pipeline 1
+wire[31:0] pc_out1, pc_4_out1, in_out1;
+if_cache pipeline1(clk, reset, reset2, pc, pc_4, in, pc_out1, pc_4_out1, in_out1);
+
+control_unit_ver1 cltr_ver1(in_out1[6:0], in_out1[31:25], in_out1[14:12], w_reg, alu_op, r_dm, w_dm, sign_ext, branch, alu_src, reg_dest, pc_sel);
+
+register_file rf(clk, in_out1[19:15], in_out1[24:20], rd_out4, write_data, data1, data2, w_reg_out4, reset, s0, s1, s2, s3);
+
+sign_extend sign_ex(in_out1[31:7], extend_imm, sign_ext);
+
+// pipeline 2
+wire[2:0] r_dm_out2, sign_ext_out2;
+wire branch_out2, alu_src_out2, pc_sel_out2;
+wire[4:0] alu_op_out2;
+wire[1:0] w_dm_out2, reg_dest_out2;
+wire[31:0] data1_out2, data2_out2, extend_imm_out2, pc_out2, pc_4_out2;
+
+id_cache pipeline2(clk, reset , reset2, w_reg, w_dm, r_dm, alu_op, reg_dest, alu_src, pc_sel, branch, 
+						data1, data2, extend_imm, pc_out1, pc_4_out1, in_out1[11:7], sign_ext,
+						w_reg_out2, w_dm_out2, r_dm_out2, alu_op_out2, reg_dest_out2, alu_src_out2, pc_sel_out2, branch_out2, 
+						data1_out2, data2_out2, extend_imm_out2, pc_out2, pc_4_out2, rd_out2, sign_ext_out2);
+wire[31:0] operand_b_1, memory_out4;
+//wire[31:0] operand_a, operand_b;
+//wire[1:0] rs1_src, rs2_src; 
+						
+mux2to1_32bit mux0(data2_out2, extend_imm_out2, alu_src_out2, operand_b_1);
+
+mux4to1_32bit mux1(data1_out2, alu_result_out3, alu_result_out4, memory_out4, rs1_src, operand_a);
+
+mux4to1_32bit mux2(operand_b_1, alu_result_out3, alu_result_out4, memory_out4, rs2_src, operand_b);
+
+alu alu(alu_op_out2, operand_a, operand_b, alu_result, isbranch);
+
+mux2to1_32bit mux3(pc_out2, data1_out2, pc_sel_out2, adder_in);
+
+adder adder1(adder_in, extend_imm_out2, pc_branch);
+
+// pipeline 3
+wire[2:0] r_dm_out3;
+wire branch_out3, isbranch_out3;
+wire[1:0] w_dm_out3, reg_dest_out3;
+wire[31:0] pc_4_out3, data2_out3;  
+alu_cache pipeline3(clk, reset , reset2, w_reg_out2, w_dm_out2, r_dm_out2, reg_dest_out2, branch_out2, pc_4_out2, rd_out2, alu_result, isbranch, pc_branch, data2_out2,
+						w_reg_out3, w_dm_out3, r_dm_out3, reg_dest_out3, branch_out3, pc_4_out3, rd_out3, alu_result_out3, isbranch_out3, pc_branch_out3, data2_out3
+						);
+
+data_memory dm(clk, alu_result_out3, data2_out3, w_dm_out3, r_dm_out3, reset, memory_out);
+
+assign pcsrc = branch_out3 & isbranch_out3;
+
+// pipeline 4
+wire[1:0] reg_dest_out4;													
+wire[31:0]  pc_4_out4;
+memory_cache pipeline4(clk, reset, reset2, w_reg_out3, reg_dest_out3, pcsrc, pc_4_out3, rd_out3, alu_result_out3, pc_branch_out3, memory_out,
+							w_reg_out4, reg_dest_out4, pcsrc_out4, pc_4_out4, rd_out4, alu_result_out4, pc_branch_out4, memory_out4
+							);
+
+mux4to1_32bit mux4(alu_result_out4, memory_out4, pc_branch_out4, pc_4_out4, reg_dest_out4, write_data);
+
+forwarding_unit fw(clk, in_out1[6:0], r_dm_out3, in_out1[11:7], in_out1[19:15], in_out1[24:20], rs1_src, rs2_src);
+
+branch_hazard_control_unit bhcu(clk, pcsrc, reset2);
+
+// end datapath
+
+always@(*) begin
+ instruc <= in;
+ pc_now <= pc;
+ imm <= extend_imm;
+ alu_branch <= reset2;
+ a <= operand_a;
+ b <= operand_b;
+ r1 <= data1;
+ r2 <= data2;
+ ra1 <= in_out1[19:15];
+ ra2 <= in_out1[24:20];
+ pc_b <= pc_branch_out3
+end
+
+endmodule
+

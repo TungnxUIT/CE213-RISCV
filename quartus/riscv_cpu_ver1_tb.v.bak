@@ -1,0 +1,21 @@
+module riscv_cpu_ver1_tb();
+reg clk, reset, w_reg;
+reg[5:0] s;
+reg[4:0] alu_op;
+reg[2:0] r_dm;
+reg[1:0] w_dm;
+reg[2:0] sign_ext;
+reg[31:0] in;
+wire[31:0] r1, r2, re_mem;
+
+initial begin
+	clk = 0;
+	reset = 1;
+	#5 reset = 0;
+	
+	#10 clk = 1;
+	in = 32'b000000001000_00001_000_00000_0000000; w_reg = 1; alu_op = 0; r_dm = 0; w_dm = 0; sign_ext = 0; s = 6'b000001;
+	#10 clk = 0;
+end
+riscv_cpu_ver1 inst(in, clk, reset, s, w_reg, alu_op, r_dm, w_dm, sign_ext, r1, r2, re_mem);
+endmodule

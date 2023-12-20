@@ -1,0 +1,21 @@
+module simplePipeline(clk, data_in, data_out, reset);
+input clk, reset;
+input[7:0] data_in;
+output[7:0] data_out;
+
+reg[7:0] storage1;
+
+always@(posedge clk) begin
+	if(!reset) begin
+		storage <= data_in;
+	end
+end
+
+assign data_out = storage;
+
+always@(*) begin
+	if(reset)
+		storage1 <= 0;
+end
+
+endmodule

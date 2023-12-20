@@ -1,0 +1,16 @@
+module data_memory(clk, address, data_in, we, re, reset, data_out);
+input clk, reset;
+input[31:0] address, data_in;
+input[2:0] we, re;
+output reg[31:0] data_out;
+
+reg[7:0] storage[1023:0];
+integer i;
+always@(posedge reset or negedge) begin
+		if(reset) begin
+			for(i=0; i < 1024; i = i + 1)
+				storage[i] = 0;
+		end
+end
+
+

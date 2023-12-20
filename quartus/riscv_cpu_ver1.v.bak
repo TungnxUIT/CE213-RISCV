@@ -1,0 +1,26 @@
+module riscv_cpu_ver1(in, clk, reset, s, w_reg, alu_op, r_dm, w_dm, sign_ext, result);
+input clk, reset;
+input[5:0] s;
+input w_reg;
+input[4:0] alu_op;
+input[1:0] r_dm;
+input w_dm;
+input[2:0] sign_ext;
+input[31:0] in;
+output[31:0] r1, r2, re_mem;
+
+wire[31:0] write_data, data1, data2, extend_imm, operand_b, alu_result, branch, memory_out;
+
+register_file rf(clk, in[19:15], in[24:20], in[11:7], write_data, data1, data2, w_reg, reset);
+sign_ext sign_ex(in[31:7], extend_imm, sign_ext);
+mux2to1_32bit mux0(data2, extend_imm, s[0], operand_b);
+alu alu(alu_op, data1, operand_b, alu_result, branch);
+data_memory dm(clk, alu_result, data2, w_dm, r_dm, reset, memory_out);
+mux2to1_32bit mux1(alu_result, memory_out, s[1]);
+
+assign r1 = data1;
+assign r2 = data2;
+assign re_mem = memory_out;
+
+endmodule
+

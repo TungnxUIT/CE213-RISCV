@@ -1,0 +1,44 @@
+module if_cache(clk, reset, pc, pc_4, instruction, pc_out, pc_4_out, instruction_out);
+input clk, reset;
+input[31:0] pc, pc_4, instruction;
+output reg[31:0] pc_out, pc_4_out, instruction_out;
+
+reg[31:0] storage_pc, storage_pc4, storage_instruction;
+
+stage1 pipeline1(clk, reset, pc, pc_4, instruction, storage_pc, storage_pc4, storage_instruction);
+
+always@(posedge clk or posedge reset) begin
+	if(reset) begin
+		pc_out <= 0;
+		pc_4_out <= 0;
+		instruction_out <= 0;
+	end
+	else begin
+		pc_out <= storage_pc;
+		pc_4_out <= storage_pc4;
+		instruction_out <= storage_instruction;
+	end
+end
+
+endmodule
+
+module stage1(clk, reset, pc, pc_4, instruction, pc_out, pc_4_out, instruction_out);
+input clk, reset;
+input[31:0] pc, pc_4, instruction;
+output reg[31:0] pc_out, pc_4_out, instruction_out;
+
+always@(posedge clk or posedge reset) begin
+	if(reset) begin
+		pc_out <= 0;
+		pc_4_out <= 0;
+		instruction_out <= 0;
+	end
+	else begin
+		pc_out <= pc_in;
+		pc_4_out <= pc_4;
+		instruction_out <= instruction;
+	end
+
+end
+
+endmodule

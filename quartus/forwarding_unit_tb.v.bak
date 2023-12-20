@@ -1,0 +1,23 @@
+module forwarding_unit_tb();
+reg clk;
+reg[4:0] rd_1, rs1_1, rs2_1;
+wire forward1, forward2;
+
+initial begin
+	clk = 0;
+	
+	#5 clk = 1;
+	rd_1 = 1;
+	#5 clk = 0;
+	
+	#5 clk = 1;
+	rs1_1 = 1; rs2_1 = 2; rd_1 = 2;
+	#5 clk = 0;
+	
+	#5 clk = 1;
+	rs1_1 = 2; rs2_1 = 2; rd_1 = 3;
+	#5 clk = 0;
+	
+end
+forwarding_unit fw_tb(clk, rd_1, rs1_1, rs2_1, forward1, forward2);
+endmodule

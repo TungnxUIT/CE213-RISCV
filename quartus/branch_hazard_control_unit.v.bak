@@ -1,0 +1,7 @@
+module branch_hazard_control_unit(branch, reset_pipeline);
+input branch;
+output reset_pipeline;
+
+assign reset_pipeline = branch ? 1 : 0;
+
+endmodule

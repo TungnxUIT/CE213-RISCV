@@ -1,0 +1,26 @@
+`timescale 1ps/100fs 
+module riscv_cpu_ver3_tb();
+reg clk, reset;
+wire[31:0] s0, s1, s2, s3, pc, a, b, r_dm3;	//Thanh ghi $0, $1, $2, $3 trong register file
+wire[1:0] f1, f2;
+reg[7:0] count_clock;		//Đếm clock
+parameter PERIOD = 20;
+initial begin					//Reset ban đầu cho Datapath
+	count_clock = 0;
+	clk = 0;
+	reset = 1;
+	#5 reset = 0;
+end
+always #((PERIOD)/2) begin
+		clk = ~clk;
+		if(clk) count_clock = count_clock + 1;		//Đếm clock
+end
+  always @* begin
+    if (s2 == -1)begin
+		$display("So fibonanci can tim: %d", s1);
+		$display("So chu ky clock: %d", count_clock);
+		$stop;		//Clock tới 14 thì dừng simulate.
+	 end
+  end
+riscv_cpu_ver3 ver3_tb(clk, reset, s0, s1, s2, s3, pc, a, b, f1, f2 r_dm3);
+endmodule

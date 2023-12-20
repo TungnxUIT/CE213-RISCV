@@ -1,0 +1,20 @@
+module sign_extend_tb();
+reg[24:0] data_in;
+reg[2:0] sel;
+wire[31:0] data_out;
+
+initial begin
+	#5 sel = 0;
+	data_in = 25'b1010101111000000000000001;
+	#5 sel = 1;
+	data_in = 25'b1010101000000000100011100;
+	#5 sel = 2;
+	data_in = 25'b1010101000010000000011101;
+	#5 sel = 3;
+	data_in = 25'b1010101111001101111000001;
+	#5 sel = 4;
+	data_in = 25'b1100110111111010101100001;
+	#5 sel = 0;
+end
+sign_extend inst(data_in, data_out, sel);
+endmodule

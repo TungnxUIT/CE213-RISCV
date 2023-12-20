@@ -1,0 +1,30 @@
+module control_unit_ver1_tb();
+reg[6:0] op, func7;
+reg[2:0] func3;
+wire reg[2:0] r_dm, sign_ext;
+wire reg w_reg, branch, alu_src, pc_sel, b_or_j;
+wire reg[4:0] alu_op;
+wire reg[1:0] w_dm, reg_dest;
+
+initial begin
+	#5
+	op = 7'b0110011; func7 = 7'b0000000; funct3 = 3'b000;		//add
+	#5
+	op = 7'b0110011; func7 = 7'b0100000; funct3 = 3'b101;		//sra
+	#5
+	op = 7'b0000011; funct3 = 3'b010;								//lw
+	#5
+	op = 7'b0010011; funct3 = 3'b001;								//slli
+	#5
+	op = 7'b0100011; funct3 = 3'b001;								//sh
+	#5
+	op = 7'b1101111; funct3 = 3'b010;								//jal
+	#5
+	op = 7'b1100111; funct3 = 3'b000;								//jalr
+	#5
+	op = 7'b1100011; funct3 = 3'b001;								//bne
+	#5
+	op = 7'b0110111; 														//lui
+end
+control_unit_ver1(op, func7, func3, w_reg, alu_op, r_dm, w_dm, sign_ext, branch, alu_src, reg_dest, pc_sel, b_or_j);
+endmodule

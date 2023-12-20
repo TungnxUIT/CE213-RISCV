@@ -1,0 +1,385 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Study\UIT\HDL\project\quartus\simulation\modelsim
+vadder
+IJoz<;5SbHS;Wo1VWKSR2b1
+VL<@jh=K75P_cKo>RAIFE>0
+Z1 dD:\Study\UIT\HDL\project\quartus\simulation\modelsim
+w1700462876
+8D:/Study/UIT/HDL/project/quartus/adder.v
+FD:/Study/UIT/HDL/project/quartus/adder.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus -O0
+!i10b 1
+!s100 _@g55k`h=g]U7f0YMkhi90
+!s85 0
+!s108 1703045785.486000
+!s107 D:/Study/UIT/HDL/project/quartus/adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/adder.v|
+!s101 -O0
+valu
+Id<[C1[bbT;9^fSMI?6Jf[3
+VjFXk^4z;Po53>0PkSSAa92
+R1
+w1700453118
+8D:/Study/UIT/HDL/project/verilog/ALU/alu.v
+FD:/Study/UIT/HDL/project/verilog/ALU/alu.v
+L0 1
+R2
+r1
+31
+R3
+!i10b 1
+!s100 <J;n]@eNVBZ6cXD[I`KTe1
+!s85 0
+!s108 1703045785.161000
+!s107 D:/Study/UIT/HDL/project/verilog/ALU/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/verilog/ALU|D:/Study/UIT/HDL/project/verilog/ALU/alu.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/verilog/ALU -O0
+valu_cache
+IiYUPzX`JYcM?D<7_F;ODR3
+VG[Fz0n@70Jl`d^b0_zib61
+R1
+w1703044778
+8D:/Study/UIT/HDL/project/quartus/alu_cache.v
+FD:/Study/UIT/HDL/project/quartus/alu_cache.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 DzLCem<HG]94S2B<E7DKa0
+!s85 0
+!s108 1703045785.661000
+!s107 D:/Study/UIT/HDL/project/quartus/alu_cache.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/alu_cache.v|
+!s101 -O0
+vbranch_hazard_control_unit
+IME1MBa^2hN>B?4@62F_JO0
+V:^5eIKIe_4NYTXAzC=Lom2
+R1
+w1701606161
+8D:/Study/UIT/HDL/project/quartus/branch_hazard_control_unit.v
+FD:/Study/UIT/HDL/project/quartus/branch_hazard_control_unit.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 UQIJ1mazXcg59?nffLz=`1
+!s85 0
+!s108 1703045785.871000
+!s107 D:/Study/UIT/HDL/project/quartus/branch_hazard_control_unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/branch_hazard_control_unit.v|
+!s101 -O0
+vcontrol_unit_ver1
+IfW?3i9gJz8<j`n`:zUAXG0
+V`mE4mOWY]=43fXTY`1;Q;1
+R1
+w1701917583
+8D:/Study/UIT/HDL/project/quartus/control_unit_ver1.v
+FD:/Study/UIT/HDL/project/quartus/control_unit_ver1.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 K0BYdWz`ah`G8]XgFR9g_3
+!s85 0
+!s108 1703045785.444000
+!s107 D:/Study/UIT/HDL/project/quartus/control_unit_ver1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/control_unit_ver1.v|
+!s101 -O0
+vdata_memory
+IFz3<9oi8h3z_09W:_E?no0
+V[8>eZT>Rl:k4iZgB_WT]]3
+R1
+w1701915576
+8D:/Study/UIT/HDL/project/quartus/data_memory.v
+FD:/Study/UIT/HDL/project/quartus/data_memory.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 2i:bgNK36NKWP0j>`Gblo0
+!s85 0
+!s108 1703045785.250000
+!s107 D:/Study/UIT/HDL/project/quartus/data_memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/data_memory.v|
+!s101 -O0
+vforwarding_unit
+IlESRBO3@dBK5YeJBUFi7]1
+V;`LlEb7VV2A1<[Tzl7M]62
+R1
+w1703045407
+8D:/Study/UIT/HDL/project/quartus/forwarding_unit.v
+FD:/Study/UIT/HDL/project/quartus/forwarding_unit.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 j1S4ef4C:6oAhoScFXMF[2
+!s85 0
+!s108 1703045785.745000
+!s107 D:/Study/UIT/HDL/project/quartus/forwarding_unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/forwarding_unit.v|
+!s101 -O0
+vid_cache
+IdK8oCT9BflARUne^WGENH3
+VTLD_[V^E_3cheMZfal9g60
+R1
+w1703044736
+8D:/Study/UIT/HDL/project/quartus/id_cache.v
+FD:/Study/UIT/HDL/project/quartus/id_cache.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 _Y39AazTCX;afF9YFGm5h3
+!s85 0
+!s108 1703045785.575000
+!s107 D:/Study/UIT/HDL/project/quartus/id_cache.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/id_cache.v|
+!s101 -O0
+vif_cache
+ITgLHzgGO7]73Pg[ShjgYS2
+VS4eb9hE;CcBNX:W=:lPRF2
+R1
+w1703039482
+8D:/Study/UIT/HDL/project/quartus/if_cache.v
+FD:/Study/UIT/HDL/project/quartus/if_cache.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 dG5e^A90<73MY7B0Ld8n11
+!s85 0
+!s108 1703045785.530000
+!s107 D:/Study/UIT/HDL/project/quartus/if_cache.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/if_cache.v|
+!s101 -O0
+vinstruction_mem
+IXDcIkEmZOHG<Y001[9ocl3
+VMYHozD:[JNj73U>gd9>zg1
+R1
+w1702364540
+8D:/Study/UIT/HDL/project/quartus/instruction_mem.v
+FD:/Study/UIT/HDL/project/quartus/instruction_mem.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 =HeYif_;Y8Z`1BTiiV;V10
+!s85 0
+!s108 1703045785.915000
+!s107 D:/Study/UIT/HDL/project/quartus/instruction_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/instruction_mem.v|
+!s101 -O0
+vmemory_cache
+I6Y[?oO1Ykn14Al7BD]V1L0
+VJUTQ<R9zjMzD_nDi^GUIi2
+R1
+w1703044798
+8D:/Study/UIT/HDL/project/quartus/memory_cache.v
+FD:/Study/UIT/HDL/project/quartus/memory_cache.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 CKZb]8C8g@mA_DaIHCeCm1
+!s85 0
+!s108 1703045785.703000
+!s107 D:/Study/UIT/HDL/project/quartus/memory_cache.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/memory_cache.v|
+!s101 -O0
+vmux2to1_32bit
+I1lBL<L@o1zkBWz;9iK>]z2
+VWn@N7h:DQ^ozH>4cTT0TQ3
+R1
+w1700140896
+8D:/Study/UIT/HDL/project/quartus/mux2to1_32bit.v
+FD:/Study/UIT/HDL/project/quartus/mux2to1_32bit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 ;0FXTVhD^S4RAIgKH]k<K1
+!s85 0
+!s108 1703045785.292000
+!s107 D:/Study/UIT/HDL/project/quartus/mux2to1_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/mux2to1_32bit.v|
+!s101 -O0
+vmux3to1_32bit
+ITPS2<RRVKSlN:Y;GL;`i81
+VP[`mEiVMcRVIC;@eUl[;`1
+R1
+w1701917081
+8D:/Study/UIT/HDL/project/quartus/mux3to1_32bit.v
+FD:/Study/UIT/HDL/project/quartus/mux3to1_32bit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 `<hUCB3KoPV;PS;Y2ajY=0
+!s85 0
+!s108 1703045785.828000
+!s107 D:/Study/UIT/HDL/project/quartus/mux3to1_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/mux3to1_32bit.v|
+!s101 -O0
+vmux4to1_32bit
+IUU08ezmkBP3N2ao`VlciN2
+V<^CAhLEJ=II7e2N^9M9ZU0
+R1
+w1700141146
+8D:/Study/UIT/HDL/project/quartus/mux4to1_32bit.v
+FD:/Study/UIT/HDL/project/quartus/mux4to1_32bit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 zPff9XPWPMNoC[R?zCR912
+!s85 0
+!s108 1703045785.358000
+!s107 D:/Study/UIT/HDL/project/quartus/mux4to1_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/mux4to1_32bit.v|
+!s101 -O0
+vprogram_counter_ver2
+ISkQbF`oIWYRMLIj1@cce`2
+VccOf3O^VIJVnYJC^?dNb71
+R1
+w1702366856
+8D:/Study/UIT/HDL/project/quartus/program_counter_ver2.v
+FD:/Study/UIT/HDL/project/quartus/program_counter_ver2.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 OnWM3WLj0mKIRzcL=kV5Z0
+!s85 0
+!s108 1703045785.616000
+!s107 D:/Study/UIT/HDL/project/quartus/program_counter_ver2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/program_counter_ver2.v|
+!s101 -O0
+vregister_file
+IzJVZ15;>^n3l;FigojaUG0
+V]IF3OYLXHTLf7:F>4BU1<2
+R1
+w1702373328
+8D:/Study/UIT/HDL/project/quartus/register_file.v
+FD:/Study/UIT/HDL/project/quartus/register_file.v
+L0 2
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 `Yco1303=FdJ2Hj;8<nZW3
+!s85 0
+!s108 1703045785.208000
+!s107 D:/Study/UIT/HDL/project/quartus/register_file.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/register_file.v|
+!s101 -O0
+vriscv_cpu_ver3
+IJSTOMYFoET3?L:DD0VDfc0
+Vh@OnVmajQ]bQ:@O53NU1:0
+R1
+w1703045393
+8D:/Study/UIT/HDL/project/quartus/riscv_cpu_ver3.v
+FD:/Study/UIT/HDL/project/quartus/riscv_cpu_ver3.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 >;F;N32`I7o]cQ:GYfVY30
+!s85 0
+!s108 1703045785.786000
+!s107 D:/Study/UIT/HDL/project/quartus/riscv_cpu_ver3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/riscv_cpu_ver3.v|
+!s101 -O0
+vriscv_cpu_ver3_tb
+!i10b 1
+!s100 ^BA7RQZYfO8GZai0hTIj12
+I6lnliWV1`no::0D1?GX9z3
+V[67>2^eoo?GK3k9E>4j6Y2
+R1
+w1703045474
+8D:/Study/UIT/HDL/project/quartus/riscv_cpu_ver3_tb.v
+FD:/Study/UIT/HDL/project/quartus/riscv_cpu_ver3_tb.v
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1703045785.958000
+!s107 D:/Study/UIT/HDL/project/quartus/riscv_cpu_ver3_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/riscv_cpu_ver3_tb.v|
+!s101 -O0
+R3
+R4
+vsign_extend
+IPf;@[XkK5W6C@AL_K@[nK3
+V<Ja8aziME28mmWDg6za`V2
+R1
+w1700448361
+8D:/Study/UIT/HDL/project/quartus/sign_extend.v
+FD:/Study/UIT/HDL/project/quartus/sign_extend.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 iRV]EhcZ5g^TcAabV]bFN1
+!s85 0
+!s108 1703045785.402000
+!s107 D:/Study/UIT/HDL/project/quartus/sign_extend.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/HDL/project/quartus|D:/Study/UIT/HDL/project/quartus/sign_extend.v|
+!s101 -O0

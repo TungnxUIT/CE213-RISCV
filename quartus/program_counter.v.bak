@@ -1,0 +1,19 @@
+module program_counter(clk, pc_next, reset, pc, pc_4);
+input clk, reset;
+input [31:0] pc_next;
+output reg[31:0] pc, pc_4;
+reg[31:0] pc_hold;
+
+initial begin
+	pc_hold = 0;
+end
+
+always@(posedge clk or posedge reset) begin
+	if(reset) begin
+		pc = -4;
+	end
+	else begin
+		pc = pc_next;
+	end
+	pc_4 = pc + 4;
+end

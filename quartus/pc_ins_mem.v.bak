@@ -1,0 +1,10 @@
+module pc_ins_mem(clk, reset, instruction);
+input clk, reset;
+output[31:0] instruction;
+
+wire[31:0] pc_next, pc, pc_4;
+
+program_counter pc(clk, pc_next, reset, pc, pc_4);
+instruction_mem ins_mem(clk, pc, instruction);
+
+endmodule;
