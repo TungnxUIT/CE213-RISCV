@@ -10,116 +10,116 @@
 # ** Warning: Copied D:\StudyProgram\altera\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/verilog/ALU {D:/Study/UIT/HDL/project/verilog/ALU/alu.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/verilog/ALU {D:/Study/UIT/HDL/project/CE213-RSICV/verilog/ALU/alu.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/register_file.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/register_file.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module register_file
 # 
 # Top level modules:
 # 	register_file
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/data_memory.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/data_memory.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module data_memory
 # 
 # Top level modules:
 # 	data_memory
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/mux2to1_32bit.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/mux2to1_32bit.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux2to1_32bit
 # 
 # Top level modules:
 # 	mux2to1_32bit
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/mux4to1_32bit.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/mux4to1_32bit.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux4to1_32bit
 # 
 # Top level modules:
 # 	mux4to1_32bit
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/sign_extend.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/sign_extend.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module sign_extend
 # 
 # Top level modules:
 # 	sign_extend
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/control_unit_ver1.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/control_unit_ver1.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module control_unit_ver1
 # 
 # Top level modules:
 # 	control_unit_ver1
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/adder.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/adder.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/if_cache.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/if_cache.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module if_cache
 # 
 # Top level modules:
 # 	if_cache
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/id_cache.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/id_cache.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module id_cache
 # 
 # Top level modules:
 # 	id_cache
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/program_counter_ver2.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/program_counter_ver2.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module program_counter_ver2
 # 
 # Top level modules:
 # 	program_counter_ver2
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/alu_cache.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/alu_cache.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module alu_cache
 # 
 # Top level modules:
 # 	alu_cache
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/memory_cache.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/memory_cache.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module memory_cache
 # 
 # Top level modules:
 # 	memory_cache
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/forwarding_unit.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/forwarding_unit.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module forwarding_unit
 # 
 # Top level modules:
 # 	forwarding_unit
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/riscv_cpu_ver3.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/riscv_cpu_ver3.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module riscv_cpu_ver3
 # 
 # Top level modules:
 # 	riscv_cpu_ver3
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/mux3to1_32bit.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/mux3to1_32bit.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux3to1_32bit
 # 
 # Top level modules:
 # 	mux3to1_32bit
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/branch_hazard_control_unit.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/branch_hazard_control_unit.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module branch_hazard_control_unit
 # 
 # Top level modules:
 # 	branch_hazard_control_unit
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/instruction_mem.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/instruction_mem.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module instruction_mem
 # 
 # Top level modules:
 # 	instruction_mem
 # 
-# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/quartus {D:/Study/UIT/HDL/project/quartus/riscv_cpu_ver3_tb.v}
+# vlog -vlog01compat -work work +incdir+D:/Study/UIT/HDL/project/CE213-RSICV/quartus {D:/Study/UIT/HDL/project/CE213-RSICV/quartus/riscv_cpu_ver3_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module riscv_cpu_ver3_tb
 # 
@@ -147,6 +147,11 @@
 # Loading work.mux3to1_32bit
 # Loading work.forwarding_unit
 # Loading work.branch_hazard_control_unit
+# ** Warning: (vsim-3017) D:/Study/UIT/HDL/project/CE213-RSICV/quartus/riscv_cpu_ver3_tb.v(24): [TFMPC] - Too few port connections. Expected 7, found 6.
+# 
+#         Region: /riscv_cpu_ver3_tb/ver3_tb
+# ** Warning: (vsim-3722) D:/Study/UIT/HDL/project/CE213-RSICV/quartus/riscv_cpu_ver3_tb.v(24): [TFMPC] - Missing connection for port 'test'.
+# 
 # 
 # add wave *
 # view structure
@@ -154,8 +159,8 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# So fibonanci can tim:    1346269
-# So chu ky cycle: 252
-# Break in Module riscv_cpu_ver3_tb at D:/Study/UIT/HDL/project/quartus/riscv_cpu_ver3_tb.v line 21
-# Simulation Breakpoint: Break in Module riscv_cpu_ver3_tb at D:/Study/UIT/HDL/project/quartus/riscv_cpu_ver3_tb.v line 21
+# So fibonanci can tim:        610
+# So chu ky cycle: 124
+# Break in Module riscv_cpu_ver3_tb at D:/Study/UIT/HDL/project/CE213-RSICV/quartus/riscv_cpu_ver3_tb.v line 21
+# Simulation Breakpoint: Break in Module riscv_cpu_ver3_tb at D:/Study/UIT/HDL/project/CE213-RSICV/quartus/riscv_cpu_ver3_tb.v line 21
 # MACRO ./risc-v_run_msim_rtl_verilog.do PAUSED at line 34

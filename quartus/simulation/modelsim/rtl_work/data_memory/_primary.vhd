@@ -8,7 +8,6 @@ entity data_memory is
         we              : in     vl_logic_vector(1 downto 0);
         re              : in     vl_logic_vector(2 downto 0);
         reset           : in     vl_logic;
-        data_out        : out    vl_logic_vector(31 downto 0);
-        mem1            : out    vl_logic_vector(31 downto 0)
+        data_out        : out    vl_logic_vector(31 downto 0)
     );
 end data_memory;

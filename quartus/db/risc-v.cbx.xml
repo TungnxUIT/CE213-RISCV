@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="risc-v">
+		<CBX_INST_ENTRY INSTANCE_NAME="|riscv_cpu_ver3|if_cache:pipeline1|altshift_taps:pc_out_rtl_0" CBX_FILE_NAME="shift_taps_1gm.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

@@ -1,5 +1,5 @@
 EDA Netlist Writer report for risc-v
-Wed Dec 20 11:10:21 2023
+Thu Dec 21 20:31:04 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Dec 20 11:10:21 2023 ;
+; EDA Netlist Writer Status ; Successful - Thu Dec 21 20:31:04 2023 ;
 ; Revision Name             ; risc-v                                ;
 ; Top-level Entity Name     ; riscv_cpu_ver3                        ;
 ; Family                    ; Cyclone II                            ;
@@ -65,13 +65,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+----------------------------------------------------------------+
-; Simulation Generated Files                                     ;
-+----------------------------------------------------------------+
-; Generated Files                                                ;
-+----------------------------------------------------------------+
-; D:/Study/UIT/HDL/project/quartus/simulation/modelsim/risc-v.vo ;
-+----------------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Simulation Generated Files                                                 ;
++----------------------------------------------------------------------------+
+; Generated Files                                                            ;
++----------------------------------------------------------------------------+
+; D:/Study/UIT/HDL/project/CE213-RSICV/quartus/simulation/modelsim/risc-v.vo ;
++----------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -80,13 +80,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Dec 20 11:10:21 2023
+    Info: Processing started: Thu Dec 21 20:31:03 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off risc-v -c risc-v
-Info (204019): Generated file risc-v.vo in folder "D:/Study/UIT/HDL/project/quartus/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file risc-v.vo in folder "D:/Study/UIT/HDL/project/CE213-RSICV/quartus/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4539 megabytes
-    Info: Processing ended: Wed Dec 20 11:10:21 2023
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Thu Dec 21 20:31:04 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

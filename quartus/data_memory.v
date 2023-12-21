@@ -1,10 +1,10 @@
 `timescale 1ps/100fs 
-module data_memory(clk, address, data_in, we, re, reset, data_out, mem1);
+module data_memory(clk, address, data_in, we, re, reset, data_out);
 input clk, reset;
 input[31:0] address, data_in;
 input[2:0] re;
 input[1:0] we;
-output reg[31:0] data_out, mem1;
+output reg[31:0] data_out;
 
 reg[7:0] storage[63:0];		//256x8 bit storage
 integer i;
@@ -38,9 +38,6 @@ always@(*) begin
 	end
 end
 
-always@(*) begin
-	mem1 <= {storage[4], storage[3], storage[2], storage[1]};
-end
 
 
 endmodule

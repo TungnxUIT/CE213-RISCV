@@ -1,4 +1,4 @@
-module riscv_cpu_ver3(clk, reset, s0, s1, s2, s3);
+module riscv_cpu_ver3(clk, reset, s0, s1, s2, s3, test);
 input clk, reset;
 
 wire[31:0] write_data, data1, data2, memory_out, pc_4, adder_in, pc_branch, in, alu_result, pc_branch_out4, alu_result_out3, alu_result_out4, extend_imm;
@@ -9,20 +9,13 @@ wire[1:0] w_dm, reg_dest;
 wire isbranch, pcsrc_out4, reset2;
 wire pcsrc, busy;
 wire[31:0] pc;
-//output[31:0] pc;
-//output pcsrc;
-
+wire[31:0] operand_a, operand_b;
+wire[31:0] pc_branch_out3;
 //test variable	
 output[31:0] s0, s1, s2, s3;
-wire[31:0] operand_a, operand_b;
-/*output reg[31:0] a, b;
-output reg[1:0] f1, f2;
-output reg[31:0] alu4;*/
-//output reg we;
-//begin datapath
-wire[31:0] pc_branch_out3, mem1;
 
-//program_counter_ver2 pc_ver2(clk, busy, reset, pc_branch_out3, pcsrc, pc, pc_4);
+//begin datapath
+
 program_counter_ver2 pc_ver2(clk, busy, reset, pc_branch, pcsrc, pc, pc_4);
 
 instruction_mem ins(pc, in);
@@ -70,7 +63,7 @@ adder adder1(adder_in, extend_imm_out2, pc_branch);
 assign pcsrc = branch_out2 & isbranch;
 
 // pipeline 3
- wire[2:0] r_dm_out3;
+wire[2:0] r_dm_out3;
 wire branch_out3, isbranch_out3;
 wire[1:0] w_dm_out3, reg_dest_out3;
 wire[31:0] pc_4_out3, data2_out3; 
@@ -78,9 +71,8 @@ alu_cache pipeline3(clk, reset , reset2, w_reg_out2, w_dm_out2, r_dm_out2, reg_d
 						w_reg_out3, w_dm_out3, r_dm_out3, reg_dest_out3, branch_out3, pc_4_out3, rd_out3, alu_result_out3, isbranch_out3, pc_branch_out3, data2_out3
 						);
 
-data_memory dm(clk, alu_result_out3, data2_out3, w_dm_out3, r_dm_out3, reset, memory_out, mem1);
+data_memory dm(clk, alu_result_out3, data2_out3, w_dm_out3, r_dm_out3, reset, memory_out);
 
-//assign pcsrc = branch_out3 & isbranch_out3;
 
 // pipeline 4
 wire[1:0] reg_dest_out4;													
@@ -95,15 +87,16 @@ forwarding_unit fw(clk, reset2, in_out1[6:0], r_dm_out3, in_out1[11:7], in_out1[
 
 branch_hazard_control_unit bhcu(clk, pcsrc, reset2);
 
-//output reg br;
 // end datapath
-always@* begin
-/*a <= operand_a;
-b <= operand_b;
-f1 <= rs1_src;
-f2 <= rs2_src;
-alu4 <= alu_result_out4;
-br <= reset2;*/
+
+//Create a module MUX 3 to 1 to simulate the critical path. This module IS NOT NECCESSARY for the completed DATAPATH.
+//USE this MUX only for simulating the true critical path: PC -> Instruction mem -> IF cache -> Register file -> ID cache -> ALU -> Memory -> MUX 3 to 1.
+wire[31:0] test0;
+mux3to1_32bit mux6(pc_branch_out4, pc_branch_out4, pc_branch_out4, reg_dest_out4, test0);
+
+output reg[31:0] test; //Need to have for caculating FMAX. If remove it, FMAX will not be caculated
+always@(posedge clk) begin
+	test <= test0;
 end
 
 endmodule
