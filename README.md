@@ -24,23 +24,4 @@ This project aims to design and implement a pipelined processor that executes RI
 - **Support for RISC-V base integer instruction set (RV32I)**.
 - **Simulation and testing environment**: Scripts and tools to test the processor with various instruction sets.
 
-## Directory Structure
-pipelined_processor_riscv/
-├── docs/
-│   └── design_specifications.md
-├── rtl/
-│   ├── if_stage.v
-│   ├── id_stage.v
-│   ├── ex_stage.v
-│   ├── mem_stage.v
-│   └── wb_stage.v
-├── testbench/
-│   ├── tb_pipeline.v
-│   └── test_cases/
-│       ├── test_case1.s
-│       └── test_case2.s
-├── scripts/
-│   ├── run_simulation.sh
-│   └── generate_waveforms.sh
-├── README.md
-└── LICENSE
+
