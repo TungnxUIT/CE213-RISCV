@@ -7,11 +7,9 @@ This project aims to design and implement a pipelined processor that executes RI
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Features](#features)
-- [Directory Structure](#directory-structure)
-- [Requirements](#requirements)
-- [Setup Instructions](#setup-instructions)
 - [Usage](#usage)
-- [Pipeline Stages](#pipeline-stages)
+- [Block Diagram](#block-diagram)
+- [Supported Instructions](#supported-instructions)
 - [Hazard Management](#hazard-management)
 - [Testing](#testing)
 - [Contributing](#contributing)
@@ -23,5 +21,20 @@ This project aims to design and implement a pipelined processor that executes RI
 - **Hazard detection and forwarding**: Efficient management of data and control hazards.
 - **Support for RISC-V base integer instruction set (RV32I)**.
 - **Simulation and testing environment**: Scripts and tools to test the processor with various instruction sets.
+
+## Usage
+
+To run this work, you will need a verilog compiler such as ncverilog, Vivado, Quartus.
+As a university Project, I used Quartus and implemented it on DE2-board for verification.
+
+## Block Diagram
+
+## Suported Instructions
+
+## Hazard Management
+
+Our work supports data forwarding to prevent data hazard. Forwarding works in most case but branch jump, to deal with it our design supportd hazard detection as well.
+
+
 
 
