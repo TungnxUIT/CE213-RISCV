@@ -66,10 +66,10 @@ It will caculate and store numbers in the Fibonacci number array to register x0 
 ### Result on model-Sim
 
 Result on monitor:
-![example](pic/result0)
+![example](pic/result0.png)
 
 Result as Waveform:
-![example](pic/result1)
+![example](pic/result1.png)
 
 ## Background
 
