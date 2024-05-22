@@ -28,6 +28,8 @@ As a university Project, I used Quartus and implemented it on DE2-board for veri
 
 ## Block Diagram
 
+![example](pic/block_diagram.png)
+
 ## Suported Instructions
 
 Click the [link](https://docs.google.com/spreadsheets/d/1AXK-irwirG9tSc05poDliCQUe7ENwq49/edit?usp=sharing&ouid=118179136445249862692&rtpof=true&sd=true) to know more supported instructions
