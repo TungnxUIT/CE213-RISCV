@@ -31,11 +31,15 @@ As a university Project, I used Quartus and implemented it on DE2-board for veri
 
 ## Suported Instructions
 
-Click [link](https://docs.google.com/spreadsheets/d/1AXK-irwirG9tSc05poDliCQUe7ENwq49/edit?usp=sharing&ouid=118179136445249862692&rtpof=true&sd=true) to know more supported instructions
+Click the [link](https://docs.google.com/spreadsheets/d/1AXK-irwirG9tSc05poDliCQUe7ENwq49/edit?usp=sharing&ouid=118179136445249862692&rtpof=true&sd=true) to know more supported instructions
 
 ## Hazard Management
 
 Our work supports data forwarding to prevent data hazard. Forwarding works in most case but branch jump, to deal with it our design supportd hazard detection as well.
+
+## Testing
+
+
 
 
 
