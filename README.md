@@ -12,6 +12,7 @@ This project aims to design and implement a pipelined processor that executes RI
 - [Supported Instructions](#supported-instructions)
 - [Hazard Management](#hazard-management)
 - [Testing](#testing)
+- [Background](#background)
 
 
 ## Features
@@ -64,9 +65,19 @@ It will caculate and store numbers in the Fibonacci number array to register x0 
 
 ### Result on model-Sim
 
+Result on monitor:
+![example](pic/result0)
+
+Result as Waveform:
+![example](pic/result1)
+
 ## Background
 
-This is originally a course project of Digital system design with HDL at University of Information and Technology
+This is originally a course project of Digital system design with HDL at University of Information and Technology.
+
+Although the design can handle numerous testcases, the Control Hazard had to take two cycles for solving. 
+
+This design can still be improved by upgrading method to handle Control Hazard in only one cycle. And I may update it in future.
 
 
 
