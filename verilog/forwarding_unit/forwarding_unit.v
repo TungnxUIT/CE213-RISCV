@@ -33,7 +33,7 @@ always@(posedge clk) begin
 	else rs2_src <= register;
 		
 		if((storage_1 == rs1 || storage_1 == rs2) && opcode == 7'b0000011) busy <= 1;
-	else busy = 0;	
+	else busy <= 0;	
 		
 	if(storage_1 == rs2 && (opcode == 7'b0010011 || opcode == 7'b0000011 || opcode == 7'b0100011 || opcode == 7'b0110111 || opcode == 7'b1101111))
 		invalid <= 1;
