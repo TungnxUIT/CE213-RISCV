@@ -9,14 +9,14 @@ output reg[31:0] pc_out, pc_4_out, instruction_out;
 
 always@(posedge clk or posedge reset) begin
 		if(reset) begin
-			pc_out = 0;
-			pc_4_out = 0;
-			instruction_out = 32'bz;
+			pc_out <= 0;
+			pc_4_out <= 0;
+			instruction_out <= 32'bz;
 		end
 		else if(reset2) begin
-			pc_out = pc;
-			pc_4_out = pc_4;
-			instruction_out = instruction;
+			pc_out <= pc;
+			pc_4_out <= pc_4;
+			instruction_out <= instruction;
 		end
 		else if(!busy) begin
 		pc_out <= pc;
