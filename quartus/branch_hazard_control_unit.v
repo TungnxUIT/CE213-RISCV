@@ -5,9 +5,9 @@ output reg reset_pipeline;
 
 always@(posedge clk) begin
 	if(branch) begin
-		reset_pipeline = 1;
+		reset_pipeline <= 1;
 	end
-	else reset_pipeline = 0;
+	else reset_pipeline <= 0;
 end
 
 endmodule
