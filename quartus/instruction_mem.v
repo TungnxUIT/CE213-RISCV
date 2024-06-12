@@ -10,7 +10,7 @@ $readmemb("input.txt", storage);
 end
 
 always@(pc) begin
-	  instruction = {storage[pc], storage[pc + 1], storage[pc + 2], storage[pc + 3]};
+	  instruction <= {storage[pc], storage[pc + 1], storage[pc + 2], storage[pc + 3]};
 end
 
 endmodule
