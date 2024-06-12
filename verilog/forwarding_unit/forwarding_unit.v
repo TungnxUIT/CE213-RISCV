@@ -15,35 +15,32 @@ parameter[1:0] alu_1 = 1;
 parameter[1:0] alu_2 = 2;
 parameter[1:0] mem = 3;
 
-initial begin
-	busy = 0;
-end
 
 always@(posedge clk) begin
 	if(reset2) begin
-		storage_2 = 5'bz;
-		storage_1 = 5'bz;
+		storage_2 <= 5'bz;
+		storage_1 <= 5'bz;
 	end
 	else begin
-	if(storage_1 == rs1) rs1_src = alu_1;
-	else if(storage_2 == rs1 && !r_dm) rs1_src = alu_2;
-	else if(storage_2 == rs1 && r_dm) rs1_src = mem;
+		if(storage_1 == rs1) rs1_src <= alu_1;
+		else if(storage_2 == rs1 && !r_dm) rs1_src <= alu_2;
+		else if(storage_2 == rs1 && r_dm) rs1_src <= mem;
 	else rs1_src <= register;
 		
-	if(storage_1 == rs2) rs2_src = alu_1;
-	else if(storage_2 == rs2 && !r_dm ) rs2_src = alu_2;
-	else if(storage_2 == rs2 && r_dm ) rs2_src = mem;	
+		if(storage_1 == rs2) rs2_src <= alu_1;
+		else if(storage_2 == rs2 && !r_dm ) rs2_src <= alu_2;
+		else if(storage_2 == rs2 && r_dm ) rs2_src <= mem;	
 	else rs2_src <= register;
 		
-	if((storage_1 == rs1 || storage_1 == rs2) && opcode == 7'b0000011) busy = 1;
+		if((storage_1 == rs1 || storage_1 == rs2) && opcode == 7'b0000011) busy <= 1;
 	else busy = 0;	
 		
 	if(storage_1 == rs2 && (opcode == 7'b0010011 || opcode == 7'b0000011 || opcode == 7'b0100011 || opcode == 7'b0110111 || opcode == 7'b1101111))
-		invalid = 1;
-	else invalid =  0;
+		invalid <= 1;
+	else invalid <=  0;
 	
-		storage_2 = storage_1;
-		storage_1 =  rd;
+		storage_2 <= storage_1;
+		storage_1 <=  rd;
 end
 	end	
 
